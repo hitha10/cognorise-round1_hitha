@@ -1,0 +1,265 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700&display=swap");
+html,
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    font-family:'poppins';
+    background: #fff;
+    overflow: hidden;
+}
+/* header lines */
+.s-one{
+    position: absolute;
+    width: 40px;
+    background: #fda94f;
+    left: 18%;
+}
+
+.s-two{
+    position: absolute;
+    width: 73px;
+    background: #ed6335;
+    left: 60%;
+}
+
+.s-three{
+    position: absolute;
+    width: 17px;
+    background: #2f2d38;
+    left: 79%;
+}
+/* nav bar */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+    padding: 0.50px;
+    font-weight: 900;
+}
+
+.navbar .logo{
+    margin-right: 100px;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: -3px;
+    margin-left: 3.9%;
+}
+
+.navbar .categories ul li{
+    margin-top: 9%;
+    margin-bottom: 5%;
+    display: inline-block;
+    padding: 0 20px;
+    font-size: 10px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.navbar .categories ul li:hover{
+    color: #ed6335;
+}
+.navbar .nav__toggle{
+    margin-right: 3%;
+    margin-top: -1%;
+    cursor: pointer;
+}
+
+.nav__buttons {
+    margin-right: 3%;
+    margin-top: -1%;
+    left: 900%;
+    display:flex;
+    align-items: center;
+    column-gap: 1rem;
+    top: 30%;
+    bottom: 30%;
+    cursor: pointer;
+}
+
+.nav__toggle{
+    display: flex;
+    cursor: pointer;
+    font-size: 1.25rem;
+    color: var(--white-color);
+    transition: color .4s;
+    display: right;
+}
+/* image */
+.img{
+    position: absolute;
+    top: 12%;
+    left: 14%;
+    
+}
+
+.img img {
+    width: 32%;
+    justify-content: left;
+    opacity: 0;
+    animation: appear 1s linear forwards;
+    animation-delay: 3s;
+}
+
+.img::after{
+    content: '';
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: #060401;
+    position: absolute;
+    animation: rev-img 1.9s cubic-bezier(0.19, 1, 0.22, 1)forwards;
+    animation-delay: 2.8s;
+}
+/* title */
+.title{
+    font-size: 80px;
+    position: absolute;
+    letter-spacing: -4px;
+    top: 290px;
+    left: 253px;
+    font-weight: 999;
+    opacity: 0;
+    animation: appear 0.0001s linear forwards;
+    animation-delay: 3.90s;
+}
+
+.title span label {
+    color: #fff;
+}
+
+.title::after{
+    content: '';
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: #000;
+    position: absolute;
+    animation: rev-block 1.5s cubic-bezier(0.19, 1, 0.22, 1)forwards;
+    animation-delay: 3.4s;
+}
+/* discription */
+.description{
+    right: 3%;
+}
+.description p{
+    font-size: 16px;
+    color: #333;
+    width: 32%;
+    margin-left: 67%;
+    margin-top: -2%;
+    margin-right: 17%;
+    animation: appear 0.0001s linear forwards;
+    animation-delay: 3.6s;
+}
+.description h1{
+    font-weight: 999;
+    font-size: 45px;
+    font-weight: bolder;
+    color: #000;
+    width: 30%;
+    margin-left: 67%;
+    margin-top: 7%;
+    margin-right: 8%;
+    letter-spacing: -1px;
+    display: grid;
+    line-height: 80%;
+    animation-delay: 3.8s;
+}
+.description h2{
+    font-size: 50px;
+    font-weight: 400;
+    margin-left: 67%;
+    margin-top: -3%;
+    margin-right: 3%;
+    color: #ed6335;
+    animation-delay: 4s;
+}
+
+/* explore button */
+button {
+    position:relative;
+    right: -935px;
+    bottom: -30px;
+    top:30%;
+    background: black;
+    border-radius: 5px 25px;
+    color: #fff;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 10px;
+    font-weight: 300;
+    border: none;
+    cursor: pointer;
+    justify-content: center;
+}
+
+button:hover {
+    color: #ed6335;
+}
+
+/* media */
+.media{
+    margin-top: -8.5%;
+    position:absolute;
+    top: 350px;
+    left: -100px;
+    transform: rotate(90deg);
+}
+
+.media ul li {
+    display: inline-block;
+    padding: 0 20px;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+.media ul li:hover{
+    color: #ed6335;
+}
+
+/* animations */
+@keyframes appear{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes rev-img{
+    0%{
+        left: 0;
+        width: 0%;
+    }
+    50%{
+        left: 0;
+        width: 32.2%;
+    }
+    100%{
+        left: 32.2;
+        width: 0%;
+    }
+}
+
+@keyframes rev-block{
+    0%{
+        left: 0;
+        width: 0%;
+    }
+    50%{
+        left: 0;
+        width: 100%;
+    }
+    100%{
+        left: 100;
+        width: 0%;
+    }
+}
